@@ -1,3 +1,4 @@
+/* Reset e base */
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +11,7 @@ body {
   color: #111;
 }
 
+/* Barra de navegação */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -34,6 +36,7 @@ body {
   font-weight: 500;
 }
 
+/* Seção principal */
 .hero {
   text-align: center;
   padding: 80px 20px;
@@ -50,55 +53,74 @@ body {
   color: #666;
 }
 
+/* Grade de produtos estilo Bershka */
 .product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
   padding: 40px;
 }
 
-.product {
-  border: 1px solid #eee;
-  padding: 15px;
-  transition: all 0.3s ease;
-  background-color: #fff;
-  text-align: center;
+/* Card de produto (novo estilo) */
+.product-card {
+  width: 230px;
+  margin: 10px;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.product:hover {
-  transform: scale(1.03);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.product img {
+/* Imagem do produto */
+.product-image img {
   width: 100%;
   height: auto;
-  margin-bottom: 15px;
+  display: block;
 }
 
-.product h2 {
-  font-size: 1rem;
-  margin-bottom: 8px;
-  font-weight: 500;
+/* Info do produto */
+.product-info {
+  padding: 5px 0;
+  text-align: left;
 }
 
-.product p {
+.product-name {
+  font-size: 12px;
+  color: #333;
+  margin: 4px 0 2px;
+  text-transform: capitalize;
+}
+
+.product-price {
+  font-size: 14px;
   font-weight: bold;
-  margin-bottom: 10px;
+  color: #111;
+  margin-bottom: 8px;
 }
 
-.product button {
-  background: transparent;
-  border: 1px solid #111;
-  padding: 10px 15px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.product button:hover {
-  background: #111;
+/* Botão "Adicionar" estilo Bershka */
+.add-button {
+  background-color: black;
   color: white;
+  border: none;
+  padding: 6px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  text-transform: uppercase;
 }
+
+.add-button:hover {
+  background-color: #444;
+}
+
+/* Carrinho, checkout, pedidos — mantidos com estilo básico */
+#cart-items div,
+#meus-pedidos div,
+#admin-pedidos div {
+  border: 1px solid #eee;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fafafa;
+}
+
 
 
 
