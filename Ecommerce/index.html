@@ -2,20 +2,26 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <title>Luiza's</title>
+  <title>Minha Loja - Fashion</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Luiza's</h1>
+  <header class="navbar">
+    <div class="logo">MINHA LOJA</div>
     <nav>
-      <a href="cart.html">🛒 Carrinho</a>
-      <a href="account.html">👤 Minha Conta</a>
-      <a href="admin.html">🔧 Admin</a>
+      <a href="index.html">Início</a>
+      <a href="cart.html">🛒</a>
+      <a href="account.html">👤</a>
     </nav>
   </header>
 
-  <main id="product-list"></main>
+  <section class="hero">
+    <h1>Nova Coleção 2025</h1>
+    <p>Explore as tendências</p>
+  </section>
+
+  <main id="product-list" class="product-grid"></main>
 
   <script src="data.js"></script>
   <script src="script.js"></script>
@@ -24,3 +30,4 @@
   </script>
 </body>
 </html>
+
