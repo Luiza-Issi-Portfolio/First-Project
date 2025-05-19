@@ -1,111 +1,153 @@
-/* Reset básico */
+/* Reset e base */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 20px;
-  background-color: #f5f5f5;
-  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  color: #111;
 }
 
-header {
-  background-color: #005fa3;
-  color: white;
-  padding: 15px 30px;
+/* Barra de navegação */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
+  padding: 20px 40px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-header h1 {
-  font-size: 1.8rem;
+.navbar .logo {
+  font-weight: 600;
+  font-size: 1.4rem;
 }
 
-nav a {
-  margin: 0 15px;
-  color: white;
+.navbar nav a {
+  margin-left: 20px;
   text-decoration: none;
+  color: #111;
   font-weight: 500;
-  transition: color 0.3s ease;
 }
 
-nav a:hover {
-  color: #ffe100;
+/* 🔄 Hero com carrossel */
+.hero {
+  text-align: center;
+  padding: 0;
+  background: #f4f4f4;
+  position: relative;
+  overflow: hidden;
+  height: 60vh; /* ✅ Altura visível do banner */
 }
 
-.container {
+/* ✅ Banner de imagens (carrossel) */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+.carousel-image.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.hero h1,
+.hero p {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  padding-top: 20px;
+}
+
+/* Seção de produtos */
+.product-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 20px;
+  justify-content: center;
+  padding: 40px;
 }
 
-.product {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 15px;
-  width: 200px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+/* Card de produto (novo estilo) */
+.product-card {
+  width: 230px;
+  margin: 10px;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.product:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-}
-
-.product img {
+/* Imagem do produto */
+.product-image img {
   width: 100%;
-  height: 150px;
-  object-fit: contain;
-  margin-bottom: 10px;
+  height: auto;
+  display: block;
 }
 
-.product h3 {
-  font-size: 1rem;
-  margin-bottom: 10px;
+/* Info do produto */
+.product-info {
+  padding: 5px 0;
+  text-align: left;
 }
 
-.product .price {
-  color: #22cc00;
+.product-name {
+  font-size: 12px;
+  color: #333;
+  margin: 4px 0 2px;
+  text-transform: capitalize;
+}
+
+.product-price {
+  font-size: 14px;
   font-weight: bold;
-  margin-bottom: 10px;
+  color: #111;
+  margin-bottom: 8px;
 }
 
-button {
-  background-color: #604410;
+/* Botão "Adicionar" estilo Bershka */
+.add-button {
+  background-color: black;
   color: white;
-  padding: 8px 14px;
   border: none;
-  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 12px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  text-transform: uppercase;
 }
 
-button:hover {
-  background-color: #005fa3;
+.add-button:hover {
+  background-color: #444;
 }
 
-.cart {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  width: 250px;
-  max-height: 400px;
-  overflow-y: auto;
-  z-index: 100;
+/* Carrinho, checkout, pedidos — mantidos com estilo básico */
+#cart-items div,
+#meus-pedidos div,
+#admin-pedidos div {
+  border: 1px solid #eee;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fafafa;
 }
+
+
+
 
