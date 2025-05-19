@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Checkout</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Finalizar Compra</h1>
+  <form id="checkout-form">
+    <input type="text" placeholder="Seu nome" required id="nome">
+    <input type="email" placeholder="Seu e-mail" required id="email">
+    <textarea placeholder="Endereço de entrega" required id="endereco"></textarea>
+    <button type="submit">Confirmar Pedido</button>
+  </form>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+  <script>
+    iniciarCheckout();
+  </script>
+</body>
+</html>
