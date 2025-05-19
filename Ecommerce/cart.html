@@ -2,25 +2,24 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <title>Minha Loja</title>
+  <title>Carrinho</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Minha Loja</h1>
+    <h1>Meu Carrinho</h1>
     <nav>
-      <a href="cart.html">🛒 Carrinho</a>
-      <a href="account.html">👤 Minha Conta</a>
-      <a href="admin.html">🔧 Admin</a>
+      <a href="index.html">🏠 Início</a>
+      <a href="checkout.html">✅ Finalizar</a>
     </nav>
   </header>
 
-  <main id="product-list"></main>
-
+  <main id="cart-items"></main>
+  <p>Total: R$ <span id="total"></span></p>
   <script src="data.js"></script>
   <script src="script.js"></script>
   <script>
-    renderProdutos();
+    renderCarrinho();
   </script>
 </body>
 </html>
