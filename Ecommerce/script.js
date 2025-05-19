@@ -1,17 +1,24 @@
 function renderProdutos() {
   const container = document.getElementById("product-list");
+  container.innerHTML = ""; // Limpa o conteúdo anterior
+
   produtos.forEach(p => {
     const card = document.createElement("div");
-    card.className = "product";
+    card.className = "product-card";
     card.innerHTML = `
-      <img src="${p.imagem}" alt="${p.nome}" />
-      <h2>${p.nome}</h2>
-      <p>R$ ${p.preco.toFixed(2)}</p>
-      <button onclick="adicionarCarrinho(${p.id})">Adicionar</button>
+      <div class="product-image">
+        <img src="${p.imagem}" alt="${p.nome}" />
+      </div>
+      <div class="product-info">
+        <p class="product-name">${p.nome}</p>
+        <p class="product-price">R$ ${p.preco.toFixed(2)}</p>
+        <button class="add-button" onclick="adicionarCarrinho(${p.id})">Adicionar</button>
+      </div>
     `;
     container.appendChild(card);
   });
 }
+
 
 function adicionarCarrinho(id) {
   const item = produtos.find(p => p.id === id);
