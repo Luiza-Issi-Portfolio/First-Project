@@ -1,17 +1,18 @@
-/* Reset básico */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilo geral */
+/* Corpo */
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
   color: #111;
+  background-color: #fff;
 }
 
+/* Links */
 a {
   text-decoration: none;
   color: inherit;
@@ -19,80 +20,86 @@ a {
 
 /* Cabeçalho */
 header {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 30px;
-  position: relative;
+  padding: 15px 40px;
+  flex-wrap: wrap;
 }
 
-.menu-left,
-.menu-right {
-  width: 200px;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 24px;
+/* Logo */
+.logo a {
+  font-size: 20px;
   font-weight: bold;
   letter-spacing: 1px;
 }
 
-/* Links do menu */
-.menu-left a,
-.menu-right a {
+/* Menu central */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin-left: 40px;
+  flex: 1;
+}
+
+.menu li a {
+  text-transform: uppercase;
   font-size: 14px;
   font-weight: 500;
-  text-transform: uppercase;
 }
 
 /* Barra de pesquisa */
-.search-form {
+.search-container {
+  flex: 1;
   display: flex;
-  width: 100%;
-  max-width: 200px;
+  justify-content: center;
 }
 
-.search-form input {
-  padding: 6px 10px;
-  border: 1px solid #ccc;
-  border-radius: 20px 0 0 20px;
+.search-container input {
   width: 100%;
+  max-width: 250px;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
   font-size: 14px;
 }
 
-.search-form button {
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-left: none;
-  background-color: #000;
-  color: white;
-  border-radius: 0 20px 20px 0;
-  cursor: pointer;
+/* Login e cesta */
+.user-menu {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  white-space: nowrap;
 }
 
 /* Conteúdo principal */
 main {
-  padding: 40px 30px;
+  padding: 40px;
   text-align: center;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #444;
 }
 
 /* Rodapé */
 footer {
   text-align: center;
   padding: 20px;
-  background-color: white;
   font-size: 14px;
   color: #aaa;
   border-top: 1px solid #eee;
 }
+
 
