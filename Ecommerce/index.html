@@ -1,103 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <title>LULI Fashion</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-  <!-- Header com barra de navegação -->
-  <header class="navbar">
-    <div class="navbar-left">
-      <div class="logo">LULI</div>
-      <nav class="categories-nav">
-        <a href="mulher.html">Mulher</a>
-        <a href="homem.html">Homem</a>
-        <a href="teen.html">Teen</a>
-        <a href="inspiracoes.html">Inspirações</a>
-      </nav>
-    </div>
-    <form class="search-form" action="#" method="GET">
-      <input type="text" placeholder="Buscar..." name="q" />
-      <button type="submit">🔍</button>
-    </form>
-    <nav class="navbar-right">
-      <a href="cart.html" aria-label="Carrinho">🛒</a>
-      <a href="account.html" aria-label="Minha Conta">👤</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LULI Fashion</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header estilo Stradivarius -->
+    <header class="header">
+      <div class="container">
+        <div class="logo">LULI</div>
+        <nav class="main-nav">
+          <a href="mulher.html">Mulher</a>
+          <a href="pet.html">Pet</a>
+          <a href="novidades.html">Novidades</a>
+          <a href="acessorios.html">Acessórios</a>
+          <a href="promocoes.html">Promoções</a>
+        </nav>
+        <div class="user-actions">
+          <a href="search.html" aria-label="Buscar">🔍</a>
+          <a href="account.html" aria-label="Minha Conta">👤</a>
+          <a href="cart.html" aria-label="Carrinho">🛒</a>
+        </div>
+      </div>
+    </header>
 
-  <!-- Hero / Carousel -->
-  <section class="hero">
-    <div class="carousel">
-      <img src="https://i.etsystatic.com/32330862/r/il/3fd97b/3621699830/il_fullxfull.3621699830_5hbd.jpg" alt="Banner 1" class="carousel-image active">
-      <img src="https://reshontheway.com/wp-content/uploads/2022/12/b178e7bb28d9dd17aa0ed5a470ee1460.jpg" alt="Banner 2" class="carousel-image">
-    </div>
-    <div class="hero-text">
-      <h1>NOVA COLEÇÃO 2025</h1>
-      <p>Estilo que transforma.</p>
-      <a href="mulher.html" class="hero-btn">Ver novidades</a>
-    </div>
-  </section>
+    <!-- Banner principal estilo Stradivarius -->
+    <section class="hero-banner">
+      <img
+        src="https://static.zara.net/assets/public/5e3d/f6dc/6542497fbbb5/52d8a2f8128a/02070118430-p/02070118430-p.jpg?ts=1717498035257&w=1920"
+        alt="Nova Coleção 2025"
+        class="hero-image"
+      />
+      <div class="hero-text">
+        <h1>Nova Coleção 2025</h1>
+        <p>Moda para você e seu pet</p>
+        <a href="novidades.html" class="btn-primary">Descubra Agora</a>
+      </div>
+    </section>
 
-  <!-- Seção de Categorias em Destaque -->
-  <section class="categories-preview">
-  <div class="category-card">
-    <a href="mulher.html">
-      <img src="https://static.zara.net/assets/public/b2f2/41c7/e4604fd6bcde/81385d6855c9/02298308300-p/02298308300-p.jpg?ts=1747325941437&w=352&f=auto" alt="Mulher">
-      <h2>Mulher</h2>
-    </a>
-  </div>
-  <div class="category-card">
-    <a href="homem.html">
-      <img src="https://static.zara.net/assets/public/9ef2/a7b9/02374784b58a/b026b49981c0/05070121737-p/05070121737-p.jpg?ts=1737117967992&w=352&f=auto" alt="Homem">
-      <h2>Homem</h2>
-    </a>
-  </div>
-  <div class="category-card">
-    <a href="teen.html">
-      <img src="https://static.zara.net/assets/public/3f1d/1488/5ed8406eb326/c9e6b9cda853/07227704400-p/07227704400-p.jpg?ts=1739365022164&w=352&f=auto" alt="Teen">
-      <h2>Teen</h2>
-    </a>
-  </div>
-  <div class="category-card">
-    <a href="pets.html">
-      <img src="https://media.laspepas.com.ar/media/catalog/product/cache/7f03f0578a6142ac6797e34b9f23bdac/s/w/sweater_granny_guau-collar_guau_1__2.jpg" alt="Pets">
-      <h2>Pets</h2>
-    </a>
-  </div>
-</section>
+    <!-- Destaques de Categorias -->
+    <section class="category-grid">
+      <div class="category-card">
+        <a href="mulher.html">
+          <img src="https://static.zara.net/assets/public/32ba/1e07/30e1452a98e5/4a46998cdbb7/02298308300-p/02298308300-p.jpg?ts=1717498035257&w=560" alt="Mulher" />
+          <h2>Mulher</h2>
+        </a>
+      </div>
+      <div class="category-card">
+        <a href="pet.html">
+          <img src="https://media.laspepas.com.ar/media/catalog/product/cache/7f03f0578a6142ac6797e34b9f23bdac/s/w/sweater_granny_guau-collar_guau_1__2.jpg" alt="Pet" />
+          <h2>Pet</h2>
+        </a>
+      </div>
+      <div class="category-card">
+        <a href="acessorios.html">
+          <img src="https://static.zara.net/assets/public/b0b2/4b4e/af9b47d899a6/4c2f56cf0f18/05271118100-p/05271118100-p.jpg?ts=1717498035257&w=560" alt="Acessórios" />
+          <h2>Acessórios</h2>
+        </a>
+      </div>
+    </section>
 
+    <!-- Produtos em Destaque -->
+    <section class="highlighted-products">
+      <h2>Destaques da Semana</h2>
+      <main id="product-list" class="product-grid"></main>
+    </section>
 
-  <!-- Produtos em Destaque -->
-  <section class="highlighted-products">
-    <h2>Produtos em Destaque</h2>
-    <main id="product-list" class="product-grid"></main>
-  </section>
+    <!-- Footer estilo minimalista -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2025 LULI Fashion. Todos os direitos reservados.</p>
+        <nav>
+          <a href="sobre.html">Sobre</a>
+          <a href="contato.html">Contato</a>
+          <a href="politica.html">Política de Privacidade</a>
+        </nav>
+      </div>
+    </footer>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 LULI Fashion. Todos os direitos reservados.</p>
-  </footer>
-
-  <script src="data.js"></script>
-  <script src="script.js"></script>
-  <script>
-    renderProdutos();
-
-    const images = document.querySelectorAll('.carousel-image');
-    let current = 0;
-
-    function showNextImage() {
-      images[current].classList.remove('active');
-      current = (current + 1) % images.length;
-      images[current].classList.add('active');
-    }
-
-    setInterval(showNextImage, 5000);
-  </script>
-</body>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+    <script>
+      renderProdutos();
+    </script>
+  </body>
 </html>
-
