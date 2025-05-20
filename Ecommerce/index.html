@@ -1,47 +1,56 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LULI Fashion</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LULI - Moda Feminina e Pet</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="header">
-    <div class="logo">LULI FASHION</div>
-    <nav class="nav">
-      <a href="#">Início</a>
-      <a href="#">Mulher</a>
-      <a href="#">Pet</a>
-      <a href="#">Contato</a>
+
+  <header class="main-header">
+    <nav class="navbar">
+      <div class="menu-left">
+        <a href="#" class="category-link">Moda Feminina</a>
+        <a href="#" class="category-link">Moda Pet</a>
+      </div>
+      <div class="logo">LULI</div>
+      <div class="menu-right">
+        <button class="search-btn">&#128269;</button>
+      </div>
     </nav>
   </header>
 
-  <main class="main">
-    <section class="hero">
-      <h1>Moda com atitude</h1>
-      <p>Roupas autorais e exclusivas — para quem não quer seguir o padrão.</p>
-      <button onclick="explorar()">Explorar</button>
-    </section>
+  <section class="hero-banner">
+    <div class="hero-text">
+      <h1>Descubra sua nova coleção favorita</h1>
+      <p>Moda que se adapta ao seu estilo. Para você e seu pet.</p>
+      <a href="#" class="hero-button">Comprar Agora</a>
+    </div>
+  </section>
 
-    <section class="produtos">
-      <div class="produto">
-        <img src="https://via.placeholder.com/400x500" alt="Produto 1">
-        <h2>Vestido Desconfortável</h2>
-        <p>R$ 249,90</p>
+  <section class="highlighted-products">
+    <h2>Produtos em Destaque</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x400" alt="Produto 1">
+        <h3>Vestido Floral</h3>
+        <p>R$ 149,90</p>
       </div>
-      <div class="produto">
-        <img src="https://via.placeholder.com/400x500" alt="Produto 2">
-        <h2>Macacão Dramático</h2>
-        <p>R$ 329,90</p>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x400" alt="Produto 2">
+        <h3>Look Pet Estiloso</h3>
+        <p>R$ 89,90</p>
       </div>
-    </section>
-  </main>
+      <!-- Adicione mais produtos aqui -->
+    </div>
+  </section>
 
-  <footer class="footer">
-    <p>© 2025 LULI FASHION. Inspirado por desgosto.com.</p>
+  <footer>
+    <p>&copy; 2025 LULI. Todos os direitos reservados.</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
+

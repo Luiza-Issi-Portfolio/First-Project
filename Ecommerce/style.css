@@ -1,104 +1,139 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  background-color: #fdfdfd;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
   color: #111;
-  font-family: 'Courier New', Courier, monospace;
-  line-height: 1.5;
 }
 
 a {
   text-decoration: none;
-  color: #111;
+  color: inherit;
 }
 
-.header {
-  background: #fff;
-  border-bottom: 1px solid #ccc;
-  padding: 20px 40px;
+.main-header {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 15px 30px;
+}
+
+.navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
-.logo {
-  font-size: 2rem;
-  font-weight: bold;
-  letter-spacing: 2px;
+.menu-left {
+  display: flex;
+  gap: 20px;
 }
 
-.nav a {
-  margin-left: 20px;
-  font-size: 1rem;
+.category-link {
+  font-weight: 600;
+  font-size: 14px;
   text-transform: uppercase;
 }
 
-.main {
-  padding: 60px 40px;
-}
-
-.hero {
+.logo {
+  font-size: 24px;
+  font-weight: bold;
   text-align: center;
-  margin-bottom: 80px;
+  flex: 1;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  font-weight: normal;
+.menu-right {
+  display: flex;
+  align-items: center;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.hero-banner {
+  position: relative;
+  background: url('https://via.placeholder.com/1600x600') center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-text {
+  color: white;
+  background: rgba(0,0,0,0.4);
+  padding: 20px 40px;
+  border-radius: 8px;
+}
+
+.hero-text h1 {
+  font-size: 36px;
   margin-bottom: 10px;
 }
 
-.hero p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
+.hero-button {
+  background: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 15px;
+  display: inline-block;
 }
 
-.hero button {
-  padding: 12px 30px;
-  background: #000;
-  color: #fff;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.hero button:hover {
-  background: #333;
-}
-
-.produtos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 40px;
-}
-
-.produto img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border: 1px solid #ccc;
-}
-
-.produto h2 {
-  font-size: 1.2rem;
-  margin: 10px 0 5px;
-}
-
-.produto p {
-  font-size: 1rem;
-  color: #555;
-}
-
-.footer {
+.highlighted-products {
+  padding: 60px 30px;
+  background-color: #fafafa;
   text-align: center;
-  padding: 30px;
-  border-top: 1px solid #ccc;
-  font-size: 0.9rem;
-  color: #888;
 }
+
+.highlighted-products h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.product-card h3 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+}
+
+.product-card p {
+  color: #444;
+  font-weight: 500;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #999;
+  background-color: #fff;
+}
+
