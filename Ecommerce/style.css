@@ -1,5 +1,10 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Montserrat', sans-serif;
   background-color: #fff;
   color: #111;
@@ -10,130 +15,76 @@ a {
   color: inherit;
 }
 
-.main-header {
-  background-color: #fff;
+header {
   border-bottom: 1px solid #eee;
-  padding: 15px 30px;
 }
 
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 15px 30px;
+  position: relative;
 }
 
-.menu-left {
+.menu-left,
+.menu-right {
+  width: 200px;
   display: flex;
   gap: 20px;
-}
-
-.category-link {
-  font-weight: 600;
-  font-size: 14px;
-  text-transform: uppercase;
+  align-items: center;
 }
 
 .logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 24px;
   font-weight: bold;
-  text-align: center;
-  flex: 1;
+  letter-spacing: 1px;
 }
 
-.menu-right {
+.menu-left a,
+.menu-right a {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.search-form {
   display: flex;
-  align-items: center;
+  width: 100%;
+  max-width: 200px;
 }
 
-.search-btn {
-  background: none;
-  border: none;
-  font-size: 18px;
+.search-form input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px 0 0 20px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.search-form button {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-left: none;
+  background-color: #000;
+  color: white;
+  border-radius: 0 20px 20px 0;
   cursor: pointer;
 }
 
-.hero-banner {
-  position: relative;
-  background: url('https://via.placeholder.com/1600x600') center/cover no-repeat;
-  height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+main {
+  padding: 40px 30px;
   text-align: center;
-}
-
-.hero-text {
-  color: white;
-  background: rgba(0,0,0,0.4);
-  padding: 20px 40px;
-  border-radius: 8px;
-}
-
-.hero-text h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-.hero-button {
-  background: white;
-  color: black;
-  padding: 10px 20px;
-  border-radius: 25px;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-top: 15px;
-  display: inline-block;
-}
-
-.highlighted-products {
-  padding: 60px 30px;
-  background-color: #fafafa;
-  text-align: center;
-}
-
-.highlighted-products h2 {
-  font-size: 28px;
-  margin-bottom: 40px;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-}
-
-.product-card {
-  background: #fff;
-  border: 1px solid #eee;
-  padding: 20px;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-}
-
-.product-card img {
-  width: 100%;
-  border-radius: 6px;
-}
-
-.product-card h3 {
-  margin: 10px 0 5px;
-  font-size: 16px;
-}
-
-.product-card p {
-  color: #444;
-  font-weight: 500;
 }
 
 footer {
   text-align: center;
   padding: 20px;
+  background-color: white;
   font-size: 14px;
-  color: #999;
-  background-color: #fff;
+  color: #aaa;
+  border-top: 1px solid #eee;
 }
-
