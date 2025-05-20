@@ -49,8 +49,8 @@ header {
 
 .menu li a {
   text-transform: uppercase;
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 /* Barra de pesquisa */
