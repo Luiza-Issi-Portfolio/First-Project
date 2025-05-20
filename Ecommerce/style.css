@@ -1,153 +1,274 @@
-/* Reset e base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
   background-color: #fff;
-  color: #111;
 }
 
-/* Barra de navegação */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  background-color: #fff;
-  border-bottom: 1px solid #eee;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  padding: 15px 30px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.navbar .logo {
-  font-weight: 600;
-  font-size: 1.4rem;
+.logo {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.navbar nav a {
+.categories-nav a {
   margin-left: 20px;
-  text-decoration: none;
-  color: #111;
   font-weight: 500;
 }
 
-/* 🔄 Hero com carrossel */
+.search-form {
+  display: flex;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.search-form input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px 0 0 20px;
+}
+
+.search-form button {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-left: none;
+  background-color: #000;
+  color: white;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+}
+
 .hero {
-  text-align: center;
-  padding: 0;
-  background: #f4f4f4;
   position: relative;
+  height: 70vh;
   overflow: hidden;
-  height: 60vh; /* ✅ Altura visível do banner */
 }
 
-/* ✅ Banner de imagens (carrossel) */
 .carousel {
-  position: relative;
-  width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
-.carousel-image {
-  position: absolute;
-  top: 0;
-  left: 0;
+.carousel img {
   width: 100%;
-  object-fit: cover;
   height: 100%;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  z-index: 0;
+  object-fit: cover;
+  display: none;
 }
 
 .carousel-image.active {
-  opacity: 1;
-  z-index: 1;
-}
-
-.hero h1,
-.hero p {
-  position: relative;
-  z-index: 2;
-  color: #fff;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  padding-top: 20px;
-}
-
-/* Seção de produtos */
-.product-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  padding: 40px;
-}
-
-/* Card de produto (novo estilo) */
-.product-card {
-  width: 230px;
-  margin: 10px;
-  font-family: 'Montserrat', sans-serif;
-}
-
-/* Imagem do produto */
-.product-image img {
-  width: 100%;
-  height: auto;
   display: block;
 }
 
-/* Info do produto */
-.product-info {
-  padding: 5px 0;
-  text-align: left;
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
 }
 
-.product-name {
-  font-size: 12px;
-  color: #333;
-  margin: 4px 0 2px;
-  text-transform: capitalize;
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
 }
 
-.product-price {
-  font-size: 14px;
-  font-weight: bold;
-  color: #111;
-  margin-bottom: 8px;
+.hero-btn {
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  margin-top: 10px;
+  display: inline-block;
 }
 
-/* Botão "Adicionar" estilo Bershka */
-.add-button {
-  background-color: black;
+.categories-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px 30px;
+  background-color: #f9f9f9;
+}
+
+.category-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover img {
+  transform: scale(1.05);
+}
+
+.category-card h2 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+.highlighted-products {
+  padding: 40px 30px;
+}
+
+.highlighted-products h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.product-card h2 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+}
+
+.product-card p {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.product-card button {
+  background-color: #000;
   color: white;
   border: none;
-  padding: 6px 10px;
-  font-size: 12px;
+  padding: 10px 20px;
+  border-radius: 20px;
   cursor: pointer;
-  text-transform: uppercase;
 }
 
-.add-button:hover {
-  background-color: #444;
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  font-size: 14px;
+  color: #aaa;
 }
 
-/* Carrinho, checkout, pedidos — mantidos com estilo básico */
-#cart-items div,
-#meus-pedidos div,
-#admin-pedidos div {
-  border: 1px solid #eee;
-  padding: 10px;
+.featured-collections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 60px 40px;
+}
+
+.collection {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.collection img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.collection:hover img {
+  transform: scale(1.05);
+}
+
+.collection .overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  transition: background 0.3s ease;
+}
+
+.collection h2 {
   margin-bottom: 10px;
-  background-color: #fafafa;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
 }
 
+.button {
+  background-color: white;
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 12px;
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background-color: #eee;
+}
+
+/* Animação suave na entrada */
+.featured-collections .collection {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.featured-collections .collection:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.featured-collections .collection:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 
