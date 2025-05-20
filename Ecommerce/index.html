@@ -9,6 +9,21 @@
 <body>
 
   <header>
+    <!-- Carrossel estilo Bershka -->
+<section class="carousel">
+  <div class="carousel-wrapper" id="carouselWrapper">
+    <div class="carousel-slide"><img src="imagem1.jpg" alt="Imagem 1"></div>
+    <div class="carousel-slide"><img src="imagem2.jpg" alt="Imagem 2"></div>
+  </div>
+
+  <!-- Botões de navegação -->
+  <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+  <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+
+  <!-- Pontos de navegação -->
+  <div class="carousel-dots" id="carouselDots"></div>
+</section>
+
     <nav class="navbar">
       <!-- Logo -->
       <div class="logo">
@@ -45,6 +60,23 @@
   <footer>
     <p>&copy; 2025 LULI. Todos os direitos reservados.</p>
   </footer>
+
+  <script>
+let currentIndex = 0;
+let slideCount = document.querySelectorAll('.carousel-slide').length;
+let wrapper = document.getElementById('carouselWrapper');
+let dotsContainer = document.getElementById('carouselDots');
+let autoTimer;
+
+// Criar dots dinamicamente
+for (let i = 0; i < slideCount; i++) {
+  const dot = document.createElement("span");
+  dot.setAttribute("onclick", `goToSlide(${i})`);
+  dotsContainer.appendChild(dot);
+}
+updateDots();
+
+function updateDots() {
 
 </body>
 </html>
