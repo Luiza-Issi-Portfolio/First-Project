@@ -9,21 +9,6 @@
 <body>
 
   <header>
-    <!-- Carrossel estilo Bershka -->
-<section class="carousel">
-  <div class="carousel-wrapper" id="carouselWrapper">
-    <div class="carousel-slide"><img src="https://media.istockphoto.com/id/1429249550/vector/the-gray-pattern-of-lines.jpg?s=612x612&w=0&k=20&c=xdWhKuT8Ev9Z67zuRT648M-qdhiT3n5tt6z9ZqCoMEA=" alt="Imagem 1"></div>
-    <div class="carousel-slide"><img src="https://t4.ftcdn.net/jpg/02/71/26/51/360_F_271265154_wjNWjG8W8yT5JctJrsBcnwY75vgwBLNx.jpg" alt="Imagem 2"></div>
-  </div>
-
-  <!-- Botões de navegação -->
-  <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
-  <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
-
-  <!-- Pontos de navegação -->
-  <div class="carousel-dots" id="carouselDots"></div>
-</section>
-
     <nav class="navbar">
       <!-- Logo -->
       <div class="logo">
@@ -50,6 +35,25 @@
     </nav>
   </header>
 
+  <!-- Carrossel estilo Bershka AGORA AQUI ABAIXO -->
+  <section class="carousel">
+    <div class="carousel-wrapper" id="carouselWrapper">
+      <div class="carousel-slide">
+        <img src="https://img.freepik.com/premium-vector/lines-gradient-pattern-texture-horizontal-halftone-graphic-geometric-linear-black_101884-2520.jpg" alt="Imagem 1">
+      </div>
+      <div class="carousel-slide">
+        <img src="https://t4.ftcdn.net/jpg/02/71/26/51/360_F_271265154_wjNWjG8W8yT5JctJrsBcnwY75vgwBLNx.jpg" alt="Imagem 2">
+      </div>
+    </div>
+
+    <!-- Botões de navegação -->
+    <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+
+    <!-- Pontos de navegação -->
+    <div class="carousel-dots" id="carouselDots"></div>
+  </section>
+
   <main>
     <section class="hero">
       <h1>Bem-vinda à LULI</h1>
@@ -62,23 +66,42 @@
   </footer>
 
   <script>
-let currentIndex = 0;
-let slideCount = document.querySelectorAll('.carousel-slide').length;
-let wrapper = document.getElementById('carouselWrapper');
-let dotsContainer = document.getElementById('carouselDots');
-let autoTimer;
+    let currentIndex = 0;
+    let slideCount = document.querySelectorAll('.carousel-slide').length;
+    let wrapper = document.getElementById('carouselWrapper');
+    let dotsContainer = document.getElementById('carouselDots');
+    let autoTimer;
 
-// Criar dots dinamicamente
-for (let i = 0; i < slideCount; i++) {
-  const dot = document.createElement("span");
-  dot.setAttribute("onclick", `goToSlide(${i})`);
-  dotsContainer.appendChild(dot);
-}
-updateDots();
+    // Criar dots dinamicamente
+    for (let i = 0; i < slideCount; i++) {
+      const dot = document.createElement("span");
+      dot.setAttribute("onclick", `goToSlide(${i})`);
+      dotsContainer.appendChild(dot);
+    }
 
-function updateDots() {
+    function updateDots() {
+      let dots = dotsContainer.querySelectorAll("span");
+      dots.forEach((dot, index) => {
+        dot.style.backgroundColor = index === currentIndex ? "#333" : "#bbb";
+      });
+    }
 
+    function moveSlide(n) {
+      currentIndex = (currentIndex + n + slideCount) % slideCount;
+      wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+      updateDots();
+    }
+
+    function goToSlide(index) {
+      currentIndex = index;
+      wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+      updateDots();
+    }
+
+    updateDots();
+  </script>
 </body>
 </html>
+
 
 
