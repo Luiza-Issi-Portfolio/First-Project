@@ -9,7 +9,7 @@
 body {
   font-family: 'Helvetica Neue', sans-serif;
   color: #111;
-  background-color: #fff;
+  background-color: #f6f8e3;
 }
 
 /* Links */
@@ -213,3 +213,8 @@ footer {
   color: #333;
 }
 
+.price {
+  color: #189ad1; /* cor vermelha para os preços, você pode trocar para qualquer cor */
+  font-weight: bold; /* deixar o preço em negrito, opcional */
+  font-size: 16px; /* um tamanho de fonte maior para dar destaque, opcional */
+}
