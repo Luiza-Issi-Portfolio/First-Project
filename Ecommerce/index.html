@@ -1,59 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <title>Minha loja - Fashion</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>LULI | Moda Feminina e Pet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="navbar">
-  <div class="navbar-left">
-    <div class="logo">LULI</div>
-    <nav class="categories-nav">
-      <a href="mulher.html">Mulher</a>
-      <a href="homem.html">Homem</a>
-      <a href="teen.html">Teen</a>
-      <a href="inspiracoes.html">Inspirações</a>
+
+  <header>
+    <nav class="navbar">
+      <div class="menu-left">
+        <a href="#">Moda Feminina</a>
+        <a href="#">Moda Pet</a>
+      </div>
+
+      <div class="logo">LULI</div>
+
+      <div class="menu-right">
+        <form class="search-form">
+          <input type="text" placeholder="Buscar">
+          <button type="submit">🔍</button>
+        </form>
+      </div>
     </nav>
-  </div>
-  <nav class="navbar-right">
-    <a href="cart.html" aria-label="Carrinho">🛒</a>
-    <a href="account.html" aria-label="Minha Conta">👤</a>
-  </nav>
-</header>
+  </header>
 
-  <section class="hero">
-  <div class="carousel">
-    <img src="https://i.etsystatic.com/32330862/r/il/3fd97b/3621699830/il_fullxfull.3621699830_5hbd.jpg" alt="Banner 1" class="carousel-image active">
-    <img src="https://reshontheway.com/wp-content/uploads/2022/12/b178e7bb28d9dd17aa0ed5a470ee1460.jpg" alt="Banner 2" class="carousel-image">
-    <img src="https://i.etsystatic.com/32330862/r/il/3fd97b/3621699830/il_fullxfull.3621699830_5hbd.jpg" alt="Banner 3" class="carousel-image">
-    <img src="https://reshontheway.com/wp-content/uploads/2022/12/b178e7bb28d9dd17aa0ed5a470ee1460.jpg" alt="Banner 4" class="carousel-image">
-  </div>
-  <h1>Nova Coleção 2025</h1>
-  <p>Explore as tendências</p>
-</section>
+  <main>
+    <h1>Bem-vindo à LULI</h1>
+    <p>Explore nossas coleções de moda feminina e pet com estilo e carinho.</p>
+  </main>
 
+  <footer>
+    &copy; 2025 LULI. Todos os direitos reservados.
+  </footer>
 
-  <main id="product-list" class="product-grid"></main>
-
-  <script src="data.js"></script>
-  <script src="script.js"></script>
-  <script>
-    renderProdutos();
-  </script>
 </body>
 </html>
-
-<script>
-  const images = document.querySelectorAll('.carousel-image');
-  let current = 0;
-
-  function showNextImage() {
-    images[current].classList.remove('active');
-    current = (current + 1) % images.length;
-    images[current].classList.add('active');
-  }
-
-  setInterval(showNextImage, 5000); // Troca a cada 5 segundos
-</script>

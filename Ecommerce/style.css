@@ -1,4 +1,3 @@
-/* Reset e base */
 * {
   margin: 0;
   padding: 0;
@@ -11,143 +10,81 @@ body {
   color: #111;
 }
 
-/* Barra de navegação */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  border-bottom: 1px solid #eee;
+}
+
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  background-color: #fff;
-  border-bottom: 1px solid #eee;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.navbar .logo {
-  font-weight: 600;
-  font-size: 1.4rem;
-}
-
-.navbar nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #111;
-  font-weight: 500;
-}
-
-/* 🔄 Hero com carrossel */
-.hero {
-  text-align: center;
-  padding: 0;
-  background: #f4f4f4;
+  justify-content: space-between;
+  padding: 15px 30px;
   position: relative;
-  overflow: hidden;
-  height: 60vh; /* ✅ Altura visível do banner */
 }
 
-/* ✅ Banner de imagens (carrossel) */
-.carousel {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.carousel-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  object-fit: cover;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  z-index: 0;
-}
-
-.carousel-image.active {
-  opacity: 1;
-  z-index: 1;
-}
-
-.hero h1,
-.hero p {
-  position: relative;
-  z-index: 2;
-  color: #fff;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  padding-top: 20px;
-}
-
-/* Seção de produtos */
-.product-grid {
+.menu-left,
+.menu-right {
+  width: 200px;
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
-  padding: 40px;
+  align-items: center;
 }
 
-/* Card de produto (novo estilo) */
-.product-card {
-  width: 230px;
-  margin: 10px;
-  font-family: 'Montserrat', sans-serif;
-}
-
-/* Imagem do produto */
-.product-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Info do produto */
-.product-info {
-  padding: 5px 0;
-  text-align: left;
-}
-
-.product-name {
-  font-size: 12px;
-  color: #333;
-  margin: 4px 0 2px;
-  text-transform: capitalize;
-}
-
-.product-price {
-  font-size: 14px;
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
   font-weight: bold;
-  color: #111;
-  margin-bottom: 8px;
+  letter-spacing: 1px;
 }
 
-/* Botão "Adicionar" estilo Bershka */
-.add-button {
-  background-color: black;
-  color: white;
-  border: none;
-  padding: 6px 10px;
-  font-size: 12px;
-  cursor: pointer;
+.menu-left a,
+.menu-right a {
+  font-size: 14px;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
-.add-button:hover {
-  background-color: #444;
+.search-form {
+  display: flex;
+  width: 100%;
+  max-width: 200px;
 }
 
-/* Carrinho, checkout, pedidos — mantidos com estilo básico */
-#cart-items div,
-#meus-pedidos div,
-#admin-pedidos div {
-  border: 1px solid #eee;
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: #fafafa;
+.search-form input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px 0 0 20px;
+  width: 100%;
+  font-size: 14px;
 }
 
+.search-form button {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-left: none;
+  background-color: #000;
+  color: white;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+}
 
+main {
+  padding: 40px 30px;
+  text-align: center;
+}
 
-
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  font-size: 14px;
+  color: #aaa;
+  border-top: 1px solid #eee;
+}
