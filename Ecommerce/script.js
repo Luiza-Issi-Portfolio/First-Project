@@ -22,3 +22,20 @@ function adicionarCarrinho(id) {
   localStorage.setItem("carrinho", JSON.stringify(carrinho));
   alert("Produto adicionado ao carrinho!");
 }
+
+// Código para abrir e fechar sidebar
+document.addEventListener("DOMContentLoaded", () => {
+  const sidebar = document.getElementById("sidebar");
+  const closeBtn = document.getElementById("closeSidebar");
+  const mulherMenu = document.getElementById("mulherMenu"); // Supondo que o link tenha esse id
+
+  mulherMenu.addEventListener("click", (e) => {
+    e.preventDefault();
+    sidebar.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    sidebar.classList.remove("active");
+  });
+});
+

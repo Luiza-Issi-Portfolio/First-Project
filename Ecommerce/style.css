@@ -218,3 +218,55 @@ footer {
   font-weight: bold; /* deixar o preço em negrito, opcional */
   font-size: 16px; /* um tamanho de fonte maior para dar destaque, opcional */
 }
+
+/* Sidebar oculta fora da tela */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px; /* começa escondida à esquerda */
+  width: 280px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  box-sizing: border-box;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+/* Sidebar aberta */
+.sidebar.active {
+  left: 0;
+}
+
+/* Botão fechar */
+.close-btn {
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  float: right;
+  margin-bottom: 10px;
+}
+
+/* Lista de categorias */
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+  color: #111;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.sidebar ul li a:hover {
+  color: #189ad1;
+}
