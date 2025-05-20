@@ -2,58 +2,94 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <title>Minha loja - Fashion</title>
+  <title>LULI Fashion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Header com barra de navegação -->
   <header class="navbar">
-  <div class="navbar-left">
-    <div class="logo">LULI</div>
-    <nav class="categories-nav">
-      <a href="mulher.html">Mulher</a>
-      <a href="homem.html">Homem</a>
-      <a href="teen.html">Teen</a>
-      <a href="inspiracoes.html">Inspirações</a>
+    <div class="navbar-left">
+      <div class="logo">LULI</div>
+      <nav class="categories-nav">
+        <a href="mulher.html">Mulher</a>
+        <a href="homem.html">Homem</a>
+        <a href="teen.html">Teen</a>
+        <a href="inspiracoes.html">Inspirações</a>
+      </nav>
+    </div>
+    <form class="search-form" action="#" method="GET">
+      <input type="text" placeholder="Buscar..." name="q" />
+      <button type="submit">🔍</button>
+    </form>
+    <nav class="navbar-right">
+      <a href="cart.html" aria-label="Carrinho">🛒</a>
+      <a href="account.html" aria-label="Minha Conta">👤</a>
     </nav>
-  </div>
-  <nav class="navbar-right">
-    <a href="cart.html" aria-label="Carrinho">🛒</a>
-    <a href="account.html" aria-label="Minha Conta">👤</a>
-  </nav>
-</header>
+  </header>
 
+  <!-- Hero / Carousel -->
   <section class="hero">
-  <div class="carousel">
-    <img src="https://i.etsystatic.com/32330862/r/il/3fd97b/3621699830/il_fullxfull.3621699830_5hbd.jpg" alt="Banner 1" class="carousel-image active">
-    <img src="https://reshontheway.com/wp-content/uploads/2022/12/b178e7bb28d9dd17aa0ed5a470ee1460.jpg" alt="Banner 2" class="carousel-image">
-    <img src="https://i.etsystatic.com/32330862/r/il/3fd97b/3621699830/il_fullxfull.3621699830_5hbd.jpg" alt="Banner 3" class="carousel-image">
-    <img src="https://reshontheway.com/wp-content/uploads/2022/12/b178e7bb28d9dd17aa0ed5a470ee1460.jpg" alt="Banner 4" class="carousel-image">
-  </div>
-  <h1>Nova Coleção 2025</h1>
-  <p>Explore as tendências</p>
-</section>
+    <div class="carousel">
+      <img src="https://i.etsystatic.com/32330862/r/il/3fd97b/3621699830/il_fullxfull.3621699830_5hbd.jpg" alt="Banner 1" class="carousel-image active">
+      <img src="https://reshontheway.com/wp-content/uploads/2022/12/b178e7bb28d9dd17aa0ed5a470ee1460.jpg" alt="Banner 2" class="carousel-image">
+    </div>
+    <div class="hero-text">
+      <h1>NOVA COLEÇÃO 2025</h1>
+      <p>Estilo que transforma.</p>
+      <a href="mulher.html" class="hero-btn">Ver novidades</a>
+    </div>
+  </section>
 
+  <!-- Seção de Categorias em Destaque -->
+  <section class="categories-preview">
+    <div class="category-card">
+      <a href="mulher.html">
+        <img src="https://images.unsplash.com/photo-1555529771-35a38f59e3a9" alt="Mulher">
+        <h2>Mulher</h2>
+      </a>
+    </div>
+    <div class="category-card">
+      <a href="homem.html">
+        <img src="https://images.unsplash.com/photo-1618354691373-c3b6b9e6ad8b" alt="Homem">
+        <h2>Homem</h2>
+      </a>
+    </div>
+    <div class="category-card">
+      <a href="teen.html">
+        <img src="https://images.unsplash.com/photo-1605559424843-4bc05f0e376d" alt="Teen">
+        <h2>Teen</h2>
+      </a>
+    </div>
+  </section>
 
-  <main id="product-list" class="product-grid"></main>
+  <!-- Produtos em Destaque -->
+  <section class="highlighted-products">
+    <h2>Produtos em Destaque</h2>
+    <main id="product-list" class="product-grid"></main>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 LULI Fashion. Todos os direitos reservados.</p>
+  </footer>
 
   <script src="data.js"></script>
   <script src="script.js"></script>
   <script>
     renderProdutos();
+
+    const images = document.querySelectorAll('.carousel-image');
+    let current = 0;
+
+    function showNextImage() {
+      images[current].classList.remove('active');
+      current = (current + 1) % images.length;
+      images[current].classList.add('active');
+    }
+
+    setInterval(showNextImage, 5000);
   </script>
 </body>
 </html>
-
-<script>
-  const images = document.querySelectorAll('.carousel-image');
-  let current = 0;
-
-  function showNextImage() {
-    images[current].classList.remove('active');
-    current = (current + 1) % images.length;
-    images[current].classList.add('active');
-  }
-
-  setInterval(showNextImage, 5000); // Troca a cada 5 segundos
-</script>
