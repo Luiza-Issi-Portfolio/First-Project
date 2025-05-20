@@ -1,9 +1,11 @@
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Estilo geral */
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #fff;
@@ -15,6 +17,7 @@ a {
   color: inherit;
 }
 
+/* Cabeçalho */
 header {
   border-bottom: 1px solid #eee;
 }
@@ -44,6 +47,7 @@ header {
   letter-spacing: 1px;
 }
 
+/* Links do menu */
 .menu-left a,
 .menu-right a {
   font-size: 14px;
@@ -51,6 +55,7 @@ header {
   text-transform: uppercase;
 }
 
+/* Barra de pesquisa */
 .search-form {
   display: flex;
   width: 100%;
@@ -75,11 +80,13 @@ header {
   cursor: pointer;
 }
 
+/* Conteúdo principal */
 main {
   padding: 40px 30px;
   text-align: center;
 }
 
+/* Rodapé */
 footer {
   text-align: center;
   padding: 20px;
@@ -88,3 +95,4 @@ footer {
   color: #aaa;
   border-top: 1px solid #eee;
 }
+
